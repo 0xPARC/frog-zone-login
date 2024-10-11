@@ -1,0 +1,7 @@
+-- CreateTable
+CREATE TABLE "Machine" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "machineId" TEXT NOT NULL,
+    "publicKey" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
