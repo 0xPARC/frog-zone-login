@@ -15,26 +15,12 @@ export function initializeZConnection(elementId: string): any | null {
 
     if (element) {
       const clientUrl = "https://zupass.org";
-      const z = connect(FrogZoneLogin, element, clientUrl); // Create the connection
-      return z; // Return the z instance for further queries
+      const z = connect(FrogZoneLogin, element, clientUrl);
+      return z;
     } else {
       console.error(`Element with id "${elementId}" not found.`);
     }
   }
 
   return null;
-}
-
-// Example usage outside of React
-const zInstance = initializeZConnection("app-connector");
-
-if (zInstance) {
-  // Use zInstance for further queries or methods
-  console.log("Z instance initialized:", zInstance);
-  // Example: Call methods on the zInstance
-  if (zInstance.someMethod) {
-    zInstance.someMethod(); // Replace with actual method
-  }
-} else {
-  console.error("Failed to initialize Z instance.");
 }
